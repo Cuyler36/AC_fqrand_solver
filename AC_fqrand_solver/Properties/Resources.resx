@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="fgdata" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fgdata.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MapIcon_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_101" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_102" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_102.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_103" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_103.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_104" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_104.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_105" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_105.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_106" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_106.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_107" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_107.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_29.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_33.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_37.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_38.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_39.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_43" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_43.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_44.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_46" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_46.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_47" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_47.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_49" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_52" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_52.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_53" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_53.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_54" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_54.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_55" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_55.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_56" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_56.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_57" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_57.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_58" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_58.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_62" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_62.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_63" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_63.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_65" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_65.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_66" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_66.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_67" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_67.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_69" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_69.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_71" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_71.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_73" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_73.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_74" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_74.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_75" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_75.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_76" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_76.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_77" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_77.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_78" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_78.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_79" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_79.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_81" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_81.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_82" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_82.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_83" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_83.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_84" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_84.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_85" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_85.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_86" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_86.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_87" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_87.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_88" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_88.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_89" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_89.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_90" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_90.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_91" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_92" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_92.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_93" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_93.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_94" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_94.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_95" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_95.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_97" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_97.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_98" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_98.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapIcon_99" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapIcon_99.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

@@ -1,0 +1,917 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.5.7.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.5.7.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CB7627B-7764-4475-9814-647847D415D6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AC_fqrand_solver</RootNamespace>
+    <AssemblyName>AC_fqrand_solver</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>64EE1AD71D05B77E604093E6318DEE1F779B76A6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AC_fqrand_solver_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cloo, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cloo.clSharp.1.0.1\lib\netstandard2.0\Cloo.dll</HintPath>
+    </Reference>
+    <Reference Include="Costura, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.5.7.0\lib\netstandard1.0\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="ILGPU, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILGPU.1.2.0\lib\net471\ILGPU.dll</HintPath>
+    </Reference>
+    <Reference Include="ILGPU.Algorithms, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILGPU.Algorithms.1.2.0\lib\net471\ILGPU.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.6.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.6.0.1\lib\net461\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.3.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.RegularExpressions.4.3.0\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllDebtsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllDebtsForm.Designer.cs">
+      <DependentUpon>AllDebtsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ILGPULogic.cs" />
+    <Compile Include="InitialTownLogic.cs" />
+    <Compile Include="InterpolatedPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ItemLists.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic.cs" />
+    <Compile Include="MapProbabilityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapProbabilityForm.Designer.cs">
+      <DependentUpon>MapProbabilityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TownGeneration.cs" />
+    <EmbeddedResource Include="AllDebtsForm.resx">
+      <DependentUpon>AllDebtsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapProbabilityForm.resx">
+      <DependentUpon>MapProbabilityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="AC_fqrand_solver_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\fgdata.bin" />
+    <EmbeddedResource Include="Resources\bgdata.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_54.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_57.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_58.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_59.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_63.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_65.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_67.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_68.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_73.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_74.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_76.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_77.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_79.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_82.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_83.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_84.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_86.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_87.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_88.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_89.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_92.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_93.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_94.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_95.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_97.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_98.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_99.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_106.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapIcon_107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapImages\0000.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0020.png" />
+    <EmbeddedResource Include="Resources\MapImages\0060.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\006C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0070.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0074.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0078.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\007C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0080.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0084.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0088.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\008C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0090.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0094.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0098.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\009C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00A0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00A4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00A8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00AC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00B0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00B4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00B8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00BC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00C0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00C4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00C8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00CC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00D0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00D4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00D8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00DC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00E0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00E4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00E8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00EC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00F0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00F4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00F8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\00FC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0100.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0104.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0108.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\010C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0110.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0114.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0118.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\011C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0120.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0124.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0128.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\012C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0130.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0134.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0138.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\013C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0140.png" />
+    <EmbeddedResource Include="Resources\MapImages\0144.png" />
+    <EmbeddedResource Include="Resources\MapImages\0148.png" />
+    <EmbeddedResource Include="Resources\MapImages\014C.png" />
+    <EmbeddedResource Include="Resources\MapImages\0154.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\015C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0160.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0164.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0168.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\016C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0170.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0174.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0178.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\017C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0180.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0184.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0188.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\018C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0190.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0194.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0198.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\019C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01A0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01A4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01A8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01AC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01B0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01B4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01B8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01BC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01C0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01C4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01C8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01CC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01D0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01D4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01D8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01DC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01E0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01E4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01E8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01EC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01F0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01F4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\01F8.png" />
+    <EmbeddedResource Include="Resources\MapImages\01FC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0200.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0204.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0208.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\020C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0210.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0214.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0218.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\021C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0220.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0224.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0228.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\022C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0230.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0234.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0244.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0248.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\024C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0250.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0254.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0258.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\025C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0260.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0264.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0268.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\026C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0270.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0274.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0278.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\027C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0280.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0284.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0288.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\028C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0290.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0294.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0298.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\029C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02A0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02A4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02A8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02AC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02B0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02B4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02B8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02BC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02C0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02C4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02C8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02CC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02E8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02EC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02F0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02F4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02F8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\02FC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0300.png" />
+    <EmbeddedResource Include="Resources\MapImages\0304.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0320.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0324.png" />
+    <EmbeddedResource Include="Resources\MapImages\0328.png" />
+    <EmbeddedResource Include="Resources\MapImages\032C.png" />
+    <EmbeddedResource Include="Resources\MapImages\0330.png" />
+    <EmbeddedResource Include="Resources\MapImages\0334.png" />
+    <EmbeddedResource Include="Resources\MapImages\0338.png" />
+    <EmbeddedResource Include="Resources\MapImages\033C.png" />
+    <EmbeddedResource Include="Resources\MapImages\0340.png" />
+    <EmbeddedResource Include="Resources\MapImages\0344.png" />
+    <EmbeddedResource Include="Resources\MapImages\0348.png" />
+    <EmbeddedResource Include="Resources\MapImages\034C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0350.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0354.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0358.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\035C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0360.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0364.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0368.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\036C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0370.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0374.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0378.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\037C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0380.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0384.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0390.png" />
+    <EmbeddedResource Include="Resources\MapImages\039C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03A0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03A4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03B0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03B4.png" />
+    <EmbeddedResource Include="Resources\MapImages\03B8.png" />
+    <EmbeddedResource Include="Resources\MapImages\03C0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03C4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03C8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03CC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03D0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03D4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03D8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03DC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03F0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03F4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03F8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\03FC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0400.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0404.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0408.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\040C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0410.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0414.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0418.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\041C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0458.png" />
+    <EmbeddedResource Include="Resources\MapImages\045C.png" />
+    <EmbeddedResource Include="Resources\MapImages\0460.png" />
+    <EmbeddedResource Include="Resources\MapImages\0468.png" />
+    <EmbeddedResource Include="Resources\MapImages\047C.png" />
+    <EmbeddedResource Include="Resources\MapImages\0480.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0484.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0488.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\048C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0490.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0494.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0498.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\04A0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\04A4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0590.png" />
+    <EmbeddedResource Include="Resources\MapImages\0594.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\0598.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\059C.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\05A0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\05A4.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\05A8.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\05AC.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\05B0.jpg" />
+    <EmbeddedResource Include="Resources\MapImages\05BC.png" />
+    <EmbeddedResource Include="Resources\MapImages\FFFF.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.6.6.3\build\Fody.targets" Condition="Exists('..\packages\Fody.6.6.3\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.6.3\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.6.3\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.5.7.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.5.7.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.5.7.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.5.7.0\build\Costura.Fody.targets'))" />
+  </Target>
+  <Import Project="..\packages\Costura.Fody.5.7.0\build\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.5.7.0\build\Costura.Fody.targets')" />
+</Project>
